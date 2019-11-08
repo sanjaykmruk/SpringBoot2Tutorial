@@ -8,8 +8,9 @@ pipeline {
     }
     stage('Testing') {
       steps {
-        sh "mvn clean test"
-          junit 'target/surefire-reports/*.xml'
+        
+        sh "mvn clean install"
+          
         }
     }
     stage('Code coverage') {
